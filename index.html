@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quản Lý Sinh Viên</h1>
+
+        <!-- Form nhập liệu -->
+        <form id="form-sinh-vien">
+    <div class="form-group">
+        <label for="maSV">Mã Sinh Viên:</label>
+        <input type="text" id="maSV" required>
+    </div>
+
+    <div class="form-group">
+        <label for="tenSV">Tên Sinh Viên:</label>
+        <input type="text" id="tenSV" required>
+    </div>
+
+    <div class="form-group">
+        <label for="diemToan">Điểm Toán:</label>
+        <input type="number" id="diemToan" step="0.01" min="0" max="10" required>
+    </div>
+
+    <div class="form-group">
+        <label for="diemVan">Điểm Văn:</label>
+        <input type="number" id="diemVan" step="0.01" min="0" max="10" required>
+    </div>
+
+    <button type="submit" id="btn-them">Thêm Sinh Viên</button>
+</form>
+
+
+        <!-- Kết quả hiển thị -->
+        <div id="ket-qua"></div>
+
+        <script type="module" src="./js/main.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #f4f4f9; 
+    padding: 20px;
+    width: 100%;
+    color: #333;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    background: #ffffff; 
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    text-align: center;
+    color: #222;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    text-align: center;
+    color: #555;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+    display: block;
+}
+
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.25s ease;
+}
+
+input:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 8px rgba(100, 100, 100, 0.2);
+    outline: none;
+}
+
+
+button {
+    width: 100%;
+    background: #000; 
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    background: #333; 
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+#ket-qua {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
