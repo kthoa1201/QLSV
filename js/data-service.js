@@ -1,29 +1,38 @@
-// data-service.js
-import { SinhVien } from "./models.js";
+// js/data-service.js
+import { SinhVien } from './model.js'; // Đã sửa models.js -> model.js
 
 export class DanhSachSV {
     constructor() {
-        this.list = [];
+        this.danhSach = [];
     }
 
-    themSV(sv) {
-        if (sv instanceof SinhVien) {
-            this.list.push(sv);
-        } else {
-            console.error("Đối tượng không hợp lệ!");
-        }
+    _mockDelay(ms = 500) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    xoaSV(maSV) {
-        this.list = this.list.filter(sv => sv.maSV !== maSV);
+    async themSV(sv) {
+        await this._mockDelay();
+        // Immutable Update
+        this.danhSach = [...this.danhSach, sv]; 
+        return this.danhSach;
     }
 
-    capNhatSV(svMoi) {
-        const index = this.list.findIndex(sv => sv.maSV === svMoi.maSV);
-        if (index !== -1) {
-            this.list[index] = svMoi;
-        } else {
-            console.warn("Không tìm thấy sinh viên để cập nhật!");
-        }
+    async xoaSV(maSV) {
+        await this._mockDelay();
+        // Sử dụng .filter()
+        this.danhSach = this.danhSach.filter(sv => sv.maSV !== maSV);
+        return this.danhSach;
+    }
+
+    async capNhatSV(maSV, thongTinMoi) {
+        await this._mockDelay();
+        // Immutable Update - Map + Spread
+        this.danhSach = this.danhSach.map(sv => {
+            if (sv.maSV === maSV) {
+                return { ...sv, ...thongTinMoi }; 
+            }
+            return sv;
+        });
+        return this.danhSach;
     }
 }
