@@ -1,4 +1,3 @@
-// js/model.js
 export class SinhVien {
     constructor(maSV, tenSV, diemToan, diemVan) {
         this.maSV = maSV;

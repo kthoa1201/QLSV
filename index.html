@@ -8,12 +8,15 @@
 </head>
 <body>
     <div class="container">
-        <h3>Thêm Sinh Viên Mới</h3>
+        <h3>Quản Lý Thông Tin Sinh Viên</h3>
         <form id="formSV">
+            <input type="text" id="txtMaSV" placeholder="Mã SV" required> 
+            
             <input type="text" id="txtTenSV" placeholder="Họ tên sinh viên" required>
             <input type="number" id="txtDiemToan" placeholder="Điểm Toán" min="0" max="10" step="0.1" required>
             <input type="number" id="txtDiemVan" placeholder="Điểm Văn" min="0" max="10" step="0.1" required>
-            <button type="submit" id="btnThem"> + Thêm</button>
+            
+            <button type="submit" id="btnSave">Thêm</button>
         </form>
 
         <h3>Danh Sách Lớp Học</h3>
@@ -25,14 +28,14 @@
                     <th>Toán</th>
                     <th>Văn</th>
                     <th>ĐTB</th>
-                    <th>Xếp loại</th> <th style="text-align: center;">Thao tác</th>
+                    <th>Xếp loại</th> 
+                    <th style="text-align: center;">Thao tác</th>
                 </tr>
             </thead>
             <tbody id="tbodySinhVien">
                 </tbody>
         </table>
-        
-    </div>
+        </div>
 
     <script type="module" src="./js/main.js"></script>
 </body>
